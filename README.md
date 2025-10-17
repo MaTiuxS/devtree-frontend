@@ -38,7 +38,7 @@ La aplicación permite gestionar y visualizar enlaces personalizados de desarrol
   ```
 3. **Inicia el servidor de desarrollo**
    ```bash
-  pnpm run dev
+   pnpm run dev
   ```
 
 🎨 Características principales
