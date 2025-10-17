@@ -31,15 +31,15 @@ La aplicación permite gestionar y visualizar enlaces personalizados de desarrol
   ```bash
   git clone https://github.com/MaTiuxS/devtree-frontend.git
   cd frontend-devtree
-
+  ```
 2. **Instala las dependencias**
   ```bash
   pnpm install
-
+  ```
 3. **Inicia el servidor de desarrollo**
    ```bash
   pnpm run dev
-
+  ```
 
 🎨 Características principales
 
