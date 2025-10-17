@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+
+
+@theme {
+    --background-image-home: url('/bg.svg');
+}

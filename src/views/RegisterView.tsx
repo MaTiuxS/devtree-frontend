@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ErrorMessage } from "../components/ErrorMessage";
 import type { RegisterForm } from "../types";
 import { isAxiosError } from "axios";
@@ -7,10 +7,12 @@ import { toast } from "sonner";
 import { api } from "../config/axios";
 
 export const RegisterView = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const initialValues: RegisterForm = {
     name: "",
     email: "",
-    handle: "",
+    handle: location?.state?.handle || "",
     password: "",
     password_confirmation: "",
   };
@@ -30,6 +32,7 @@ export const RegisterView = () => {
       const { data } = await api.post(`/auth/register`, formData);
       toast.success(data);
       reset();
+      navigate("/auth/login");
     } catch (error) {
       if (isAxiosError(error) && error.response) {
         toast.error(error.response.data.error);
@@ -100,7 +103,7 @@ export const RegisterView = () => {
         </div>
         <div className="grid grid-cols-1 space-y-3">
           <label htmlFor="password" className="text-2xl text-slate-500">
-            Password
+            Contraseña
           </label>
           <input
             id="password"
@@ -130,7 +133,7 @@ export const RegisterView = () => {
             htmlFor="password_confirmation"
             className="text-2xl text-slate-500"
           >
-            Repetir Password
+            Repetir Contraseña
           </label>
           <input
             id="password_confirmation"
