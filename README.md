@@ -20,6 +20,7 @@ La aplicación permite gestionar y visualizar enlaces personalizados de desarrol
 
 ## 📁 Estructura del proyecto
 
+<img width="435" height="593" alt="Captura de pantalla 2025-10-16 215837" src="https://github.com/user-attachments/assets/02376a75-5338-46fd-a8a6-8b89fea1f627" />
 
 
 ---
@@ -28,7 +29,7 @@ La aplicación permite gestionar y visualizar enlaces personalizados de desarrol
 
 1. **Clona el repositorio**
   ```bash
-  git clone https://github.com/tu-usuario/frontend-devtree.git
+  git clone https://github.com/MaTiuxS/devtree-frontend.git
   cd frontend-devtree
 
 2. **Instala las dependencias**
